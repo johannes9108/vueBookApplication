@@ -1,12 +1,23 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-
-Vue.config.productionTip = false
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+// import Library from "./views/Library.vue";
+import store from "./store";
+import data from "./assets/childrensbooks.json";
+Vue.config.productionTip = false;
 
 new Vue({
+  data() {
+    return {
+      books: data.books,
+    };
+  },
+  methods: {
+    getBook(id) {
+      return this.books.find((book) => book.id == id);
+    },
+  },
   router,
   store,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");
