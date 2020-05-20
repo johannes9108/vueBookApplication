@@ -1,5 +1,8 @@
 <template>
-  <div class="bookCover" :style="{backgroundColor: data.color}">
+  <div
+    class="bookCover"
+    :style="{backgroundImage: `linear-gradient(to top right, ${data.color}, rgb(255, 255, 255))`}"
+  >
     <span>
       <h3>{{data.title}}</h3>
       <h6>{{data.author}}</h6>
@@ -16,11 +19,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.small {
+  // width: 20%;
+  height: 30vh;
+}
 .bookCover {
   color: white;
   border-radius: 2px;
-  height: 100%;
-  // width: 350px;
   span {
     height: 100%;
     display: flex;

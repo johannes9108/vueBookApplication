@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style lang="scss">
+a {
+  text-decoration: none;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -28,7 +31,13 @@ export default {
   box-sizing: border-box;
   padding: 0;
   margin: 0 auto;
-  // max-width: 1200px;
+  max-width: 1200px;
+  background-image: linear-gradient(
+    to right,
+    rgb(90, 183, 245),
+    rgb(82, 151, 168)
+  );
+  // height: 100vh;
   h1,
   h2,
   h3,
@@ -38,7 +47,7 @@ export default {
     margin: 0;
     padding: 0;
   }
-  background-image: linear-gradient(rgb(225, 251, 252), rgb(100, 189, 221));
+
   line-height: 1.6;
   color: #2c3e50;
 }

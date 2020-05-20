@@ -3,20 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 // import Library from "./views/Library.vue";
 import store from "./store";
-import data from "./assets/childrensbooks.json";
+// import data from "./assets/childrensbooks.json";
 Vue.config.productionTip = false;
 
 new Vue({
-  data() {
-    return {
-      books: data.books,
-    };
-  },
-  methods: {
-    getBook(id) {
-      return this.books.find((book) => book.id == id);
-    },
-  },
   router,
   store,
   render: (h) => h(App),
